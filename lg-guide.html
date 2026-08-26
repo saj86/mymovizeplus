@@ -1,0 +1,216 @@
+<!doctype html><meta charset="utf-8">
+<title>نصب روی تلویزیون LG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --accent:#E53C3A; --accent-deep:#B92A28; --accent-soft:#FBE7E5;
+    --ground:#FAF7F6; --surface:#FFFFFF; --raised:#FFFFFF;
+    --ink:#1B1517; --muted:#6E6163; --faint:#94888A;
+    --hair:#ECE3E2; --hair-strong:#DED2D1;
+    --code-bg:#17131A; --code-ink:#ECE6EE; --code-dim:#9C93A0; --code-prompt:#FF7A72;
+    --shadow:0 1px 2px rgba(27,21,23,.04), 0 8px 30px rgba(27,21,23,.06);
+    --radius:16px;
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --ground:#131013; --surface:#1C181B; --raised:#221D21;
+      --ink:#F3EEEF; --muted:#AC9FA2; --faint:#7E7276;
+      --hair:#2B2529; --hair-strong:#3A333799;
+      --accent-soft:#3A1E1F;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 34px rgba(0,0,0,.34);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#131013; --surface:#1C181B; --raised:#221D21;
+    --ink:#F3EEEF; --muted:#AC9FA2; --faint:#7E7276;
+    --hair:#2B2529; --hair-strong:#3A3337;
+    --accent-soft:#3A1E1F;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 34px rgba(0,0,0,.34);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Vazirmatn", system-ui, sans-serif;
+    line-height:1.85; font-size:17px; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 22px 96px}
+
+  /* ---- header ---- */
+  header{padding:64px 0 34px; text-align:center}
+  .badge{
+    width:78px;height:78px;margin:0 auto 22px;border-radius:20px;
+    background:linear-gradient(160deg,#EF4A47,#C42B29);
+    display:grid;place-items:center;position:relative;
+    box-shadow:0 10px 30px rgba(196,43,41,.38);
+  }
+  .badge b{font-family:"JetBrains Mono",monospace;font-weight:700;color:#fff;font-size:44px;line-height:1;letter-spacing:-2px}
+  .badge i{position:absolute;bottom:15px;right:16px;width:0;height:0;
+    border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:9px solid #fff;transform:rotate(180deg)}
+  h1{font-size:34px;font-weight:800;margin:0 0 8px;letter-spacing:-.5px;text-wrap:balance}
+  .sub{color:var(--muted);font-size:16px;margin:0 auto;max-width:44ch}
+  .meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .chip{font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--hair);
+    border-radius:999px;padding:5px 13px;font-weight:500}
+  .chip code{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-deep)}
+  :root[data-theme="dark"] .chip code, :root:not([data-theme="light"]) .chip code{color:#FF8078}
+
+  /* ---- note banner ---- */
+  .note{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--accent-soft);border:1px solid transparent;
+    border-radius:14px;padding:15px 17px;margin:8px 0 40px;font-size:15px;color:var(--ink)
+  }
+  .note .dot{flex:none;width:22px;height:22px;border-radius:6px;background:var(--accent);
+    display:grid;place-items:center;color:#fff;font-size:14px;font-weight:700;margin-top:2px}
+
+  /* ---- section ---- */
+  section{margin:0 0 14px}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.14em;color:var(--accent);
+    text-transform:uppercase;margin:44px 0 4px}
+  h2{font-size:23px;font-weight:800;margin:0 0 18px;letter-spacing:-.3px;text-wrap:balance}
+
+  /* ---- steps ---- */
+  ol.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:flex;flex-direction:column;gap:14px}
+  ol.steps>li{
+    counter-increment:s;position:relative;
+    background:var(--surface);border:1px solid var(--hair);border-radius:var(--radius);
+    padding:20px 66px 20px 22px;box-shadow:var(--shadow)
+  }
+  ol.steps>li::before{
+    content:counter(s);position:absolute;top:18px;right:18px;
+    width:34px;height:34px;border-radius:10px;
+    background:var(--accent);color:#fff;
+    font-family:"JetBrains Mono",monospace;font-weight:700;font-size:16px;
+    display:grid;place-items:center
+  }
+  ol.steps>li h3{margin:2px 0 6px;font-size:17.5px;font-weight:700}
+  ol.steps>li p{margin:0;color:var(--muted);font-size:15.5px}
+  ol.steps b{color:var(--ink);font-weight:700}
+  .kbd{font-family:"JetBrains Mono",monospace;font-size:13px;background:var(--accent-soft);
+    color:var(--accent-deep);border-radius:6px;padding:1px 7px;font-weight:500;white-space:nowrap;direction:ltr;display:inline-block}
+  :root[data-theme="dark"] .kbd,:root:not([data-theme="light"]) .kbd{color:#FF8078}
+
+  /* ---- terminal code ---- */
+  figure.term{margin:16px 0;border-radius:14px;overflow:hidden;border:1px solid var(--hair-strong);
+    background:var(--code-bg);box-shadow:var(--shadow)}
+  figure.term figcaption{display:flex;align-items:center;gap:8px;padding:10px 14px;
+    background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06)}
+  .tl{display:flex;gap:6px}.tl i{width:11px;height:11px;border-radius:50%;background:#4a444c}
+  .tl i:first-child{background:#E5544B}.tl i:nth-child(2){background:#E0A23B}.tl i:last-child{background:#3FB463}
+  figcaption .cap{margin-inline-start:auto;color:var(--code-dim);font-size:12.5px;font-family:"Vazirmatn"}
+  figure.term pre{margin:0;padding:16px 18px;overflow-x:auto;direction:ltr;text-align:left}
+  figure.term code{font-family:"JetBrains Mono",monospace;font-size:13.5px;line-height:1.95;color:var(--code-ink);white-space:pre}
+  .term .p{color:var(--code-prompt)}   /* prompt $ */
+  .term .c{color:var(--code-dim)}       /* comment  */
+  .copy{appearance:none;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);
+    color:#cfc7d2;font-family:"Vazirmatn";font-size:12px;border-radius:7px;padding:4px 11px;cursor:pointer;
+    margin-inline-start:auto;transition:.15s}
+  figcaption:has(.copy) .cap{display:none}
+  .copy:hover{background:rgba(255,255,255,.12);color:#fff}
+  .copy.done{color:#7fd39a;border-color:#3d6b4e}
+
+  /* ---- troubleshooting ---- */
+  .trouble{display:flex;flex-direction:column;gap:12px}
+  details.q{background:var(--surface);border:1px solid var(--hair);border-radius:13px;box-shadow:var(--shadow);overflow:hidden}
+  details.q>summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:700;font-size:16px;
+    display:flex;align-items:center;gap:12px}
+  details.q>summary::-webkit-details-marker{display:none}
+  details.q>summary .tw{flex:none;width:24px;height:24px;border-radius:7px;background:var(--accent-soft);
+    color:var(--accent-deep);display:grid;place-items:center;font-weight:800;transition:.2s}
+  :root[data-theme="dark"] .tw,:root:not([data-theme="light"]) .tw{color:#FF8078}
+  details.q[open]>summary .tw{transform:rotate(45deg)}
+  details.q .body{padding:0 20px 18px 54px;color:var(--muted);font-size:15px}
+  details.q .body p{margin:0 0 8px}
+
+  hr.rule{border:0;height:1px;background:var(--hair);margin:52px 0}
+  footer{color:var(--faint);font-size:14px;text-align:center;line-height:2}
+  a{color:var(--accent-deep);text-decoration-color:var(--hair-strong);text-underline-offset:3px}
+  :root[data-theme="dark"] a,:root:not([data-theme="light"]) a{color:#FF8078}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;border-radius:4px}
+  @media (max-width:520px){
+    header{padding:44px 0 26px} h1{font-size:27px} .wrap{padding:0 16px 72px}
+    ol.steps>li{padding:18px 56px 18px 16px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .back{display:inline-flex;align-items:center;gap:7px;margin:26px 0 -18px;color:var(--muted);
+    text-decoration:none;font-size:14.5px;font-weight:500;padding:7px 13px;border:1px solid var(--hair);
+    border-radius:999px;background:var(--surface);transition:.15s}
+  .back:hover{color:var(--accent-deep);border-color:var(--accent)}
+  :root[data-theme="dark"] .back:hover,:root:not([data-theme="light"]) .back:hover{color:#FF8078}
+</style>
+
+<div class="wrap">
+  <a class="back" href="index.html">→ بازگشت به صفحه‌ی دانلود</a>
+  <header>
+    <div class="badge" aria-hidden="true"><b>M</b><i></i></div>
+    <h1>نصب روی تلویزیون LG</h1>
+    <p class="sub">نصب «مای موویز پلاس» روی webOS از یک کامپیوتر <b>ویندوز</b> — بدون ترمینال، فقط با یک برنامه‌ی گرافیکی.</p>
+    <div class="meta"><span class="chip">فایل نصب: <code>moviz-webos.ipk</code></span><span class="chip">نسخه <code>۱.۷.۲</code></span></div>
+  </header>
+
+  <div class="note"><span class="dot">i</span><div>یک‌بار روی تلویزیون باید <b>Developer Mode</b> روشن شود (گام ۱). تلویزیون و کامپیوتر باید روی یک شبکه‌ی WiFi/LAN باشند.</div></div>
+
+  <section>
+    <div class="eyebrow">آنچه لازم داری</div>
+    <h2>پیش‌نیازها</h2>
+    <ol class="steps">
+      <li><h3>فایل نصب اپ</h3><p>فایل <span class="kbd">moviz-webos.ipk</span> را از صفحه‌ی دانلود بگیر (دکمه‌ی «دانلود بسته‌ی webOS»).</p></li>
+      <li><h3>برنامه‌ی Dev Manager Desktop</h3><p>یک برنامه‌ی گرافیکی رایگان برای ویندوز. نسخه‌ی ویندوز (<span class="kbd">.exe</span>) را از اینجا بگیر: <a href="https://github.com/webosbrew/dev-manager-desktop/releases">github.com/webosbrew/dev-manager-desktop</a></p></li>
+      <li><h3>حساب رایگان LG</h3><p>برای روشن‌کردن Developer Mode روی تلویزیون لازم است: در <a href="https://developer.lge.com">developer.lge.com</a> ثبت‌نام کن.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="eyebrow">روی تلویزیون — یک‌بار</div>
+    <h2>گام ۱ — روشن‌کردن Developer Mode</h2>
+    <ol class="steps">
+      <li><h3>نصب اپ Developer Mode</h3><p>در <b>LG Content Store</b> اپ <b>«Developer Mode»</b> را نصب کن، بازش کن و با حساب <b>developer.lge.com</b> لاگین کن.</p></li>
+      <li><h3>فعال‌سازی</h3><p><b>Dev Mode Status</b> را <b>ON</b> کن؛ تلویزیون یک‌بار <b>ری‌استارت</b> می‌شود.</p></li>
+      <li><h3>یادداشت اطلاعات</h3><p>دوباره اپ Developer Mode را باز کن و بردار: <b>IP تلویزیون</b> (مثل <span class="kbd">10.0.0.55</span>) و <b>Passphrase</b> (کد ۶ حرفی مثل <span class="kbd">AB12CD</span>). گزینه‌ی <b>Key Server</b> روشن بماند.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="eyebrow">روی ویندوز</div>
+    <h2>گام ۲ — نصب با Dev Manager Desktop</h2>
+    <ol class="steps">
+      <li><h3>برنامه را باز کن</h3><p>فایل <span class="kbd">.exe</span> که دانلود کردی را روی ویندوز نصب و اجرا کن.</p></li>
+      <li><h3>تلویزیون را اضافه کن</h3><p>روی دکمه‌ی <b>+ (Add Device)</b> بزن و <b>IP</b> و <b>Passphrase</b> تلویزیون را وارد کن تا وصل شود.</p></li>
+      <li><h3>نصب فایل ipk</h3><p>به بخش <b>Apps</b> برو، دکمه‌ی <b>Install</b> را بزن و فایل <span class="kbd">moviz-webos.ipk</span> را انتخاب کن. چند لحظه بعد، اپ در ردیف برنامه‌های تلویزیون ظاهر می‌شود. ✅</p></li>
+    </ol>
+    <div class="note" style="margin:16px 0 0"><span class="dot">✔</span><div>برای <b>به‌روزرسانی</b> در آینده، همین کار را با فایل <span class="kbd">.ipk</span> جدید تکرار کن؛ داده‌ها و تنظیمات روی تلویزیون حفظ می‌شود.</div></div>
+  </section>
+
+  <hr class="rule">
+  <section>
+    <div class="eyebrow">اگر به مشکل خوردی</div>
+    <h2>عیب‌یابی</h2>
+    <div class="trouble">
+      <details class="q"><summary><span class="tw">+</span> Dev Manager به تلویزیون وصل نمی‌شود</summary><div class="body"><p>تلویزیون و کامپیوتر روی یک شبکه‌اند و IP درست است؟ Developer Mode روشن و <b>Key Server</b> فعال است؟</p></div></details>
+      <details class="q"><summary><span class="tw">+</span> خطای کلید / passphrase نامعتبر</summary><div class="body"><p>کلید دسترسی هر چند وقت منقضی می‌شود. در اپ Developer Mode یک <b>passphrase تازه</b> بگیر و دوباره در Dev Manager وارد کن.</p></div></details>
+      <details class="q"><summary><span class="tw">+</span> اپ باز می‌شود ولی می‌گوید «اتصال اینترنت برقرار نیست»</summary><div class="body"><p>با اینکه اینترنت تلویزیون وصل است، یعنی webOS جلوی درخواست‌های cross-origin مای‌موویز را با <b>CORS</b> گرفته. اگر این را دیدی بگو تا یک راه‌حل (پراکسی سبک) اضافه کنم.</p></div></details>
+      <details class="q"><summary><span class="tw">+</span> فیلم پخش نمی‌شود</summary><div class="body"><p>روی webOS پخش با <span class="kbd">&lt;video&gt;</span> مرورگر است؛ اگر عنوانی پخش نشد، لینک/فرمت آن را بگو تا بررسی کنم.</p></div></details>
+    </div>
+  </section>
+
+  <hr class="rule">
+  <footer>ناوبری با ریموت جهت‌دار مثل نسخه‌ی اندروید کار می‌کند.<br>Dev Manager Desktop نسخه‌ی مک و لینوکس هم دارد؛ مراحل یکسان است.</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var code = btn.closest('figure').querySelector('code');
+      try{ navigator.clipboard.writeText(code.innerText.replace(/^\s*\$\s/gm,''));
+        var o=btn.textContent;btn.textContent='کپی شد ✓';btn.classList.add('done');
+        setTimeout(function(){btn.textContent=o;btn.classList.remove('done')},1400);
+      }catch(e){btn.textContent='ناموفق'}
+    });
+  });
+</script>

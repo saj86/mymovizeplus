@@ -1,0 +1,166 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>تغییرات نسخه‌ها — مای موویز پلاس</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
+<style>
+  :root{--red:#E53C3A;--red2:#B92A28;--bg:#0E0F13;--surf:#1A171B;--hair:#2A242A;--ink:#F3EEEF;--muted:#A99EA0;--gold:#E7B44C}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,sans-serif;
+    display:flex;flex-direction:column;align-items:center;padding:52px 20px 80px;line-height:1.85}
+  .badge{width:70px;height:70px;border-radius:18px;background:linear-gradient(160deg,#EF4A47,#C42B29);
+    display:grid;place-items:center;position:relative;box-shadow:0 12px 34px rgba(196,43,41,.42);margin-bottom:16px}
+  .badge b{font-family:monospace;font-weight:700;color:#fff;font-size:40px;line-height:1;letter-spacing:-2px}
+  .badge i{position:absolute;bottom:14px;right:15px;width:0;height:0;border-top:5px solid transparent;
+    border-bottom:5px solid transparent;border-left:8px solid #fff}
+  h1{font-size:27px;font-weight:800;margin:0 0 6px;text-align:center}
+  .sub{color:var(--muted);margin:0 0 10px;font-size:14.5px;text-align:center}
+  .legend{color:var(--muted);font-size:13px;margin:0 0 30px;display:flex;gap:16px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .dot.f{background:var(--gold)} .dot.b{background:var(--red)}
+  .wrap{width:100%;max-width:560px}
+  .rel{background:var(--surf);border:1px solid var(--hair);border-radius:18px;padding:20px 22px;margin-bottom:16px}
+  .rel-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .ver{font-family:monospace;direction:ltr;background:linear-gradient(160deg,#EF4A47,#C42B29);color:#fff;
+    font-weight:700;font-size:15px;padding:4px 12px;border-radius:20px}
+  .rel.old .ver{background:#2A242A;color:var(--muted)}
+  .rel-title{font-weight:700;font-size:15.5px;color:var(--ink)}
+  ul{list-style:none;padding:0;margin:10px 0 0}
+  li{position:relative;padding-right:22px;margin:8px 0;font-size:14.5px;color:#DCD4D6}
+  li .dot{position:absolute;right:2px;top:9px}
+  a.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);
+    border:1px solid var(--hair);border-radius:12px;padding:11px 18px;font-size:14px;margin-top:14px}
+  a.back:hover{border-color:var(--red);color:#fff}
+  .foot{color:#6E6366;font-size:12.5px;margin-top:22px;text-align:center}
+</style>
+<body>
+  <div class="badge"><b>M</b><i></i></div>
+  <h1>تغییرات نسخه‌ها</h1>
+  <p class="sub">هر آپدیت، ویژگی‌های تازه و رفع باگ‌ها را اینجا می‌بینی.</p>
+  <p class="legend"><span><i class="dot f"></i> ویژگی</span><span><i class="dot b"></i> رفع باگ</span></p>
+
+  <div class="wrap">
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۶</span><span class="rel-title">اصلاحِ نمایشِ صفحه‌ی اصلی</span></div>
+      <ul>
+        <li><i class="dot b"></i>نام فیلم زیرِ پوسترها دیگر بریده نمی‌شود: هم نام انگلیسی و هم نام فارسی + سال کامل نمایش داده می‌شوند (ارتفاعِ ردیف بر اساسِ اندازه‌ی واقعیِ پوستر).</li>
+        <li><i class="dot b"></i>خلاصه‌ی فیلم در بخشِ «برگزیده» همیشه نمایش داده می‌شود (روی صفحه‌های کوچک‌تر یک‌خطی می‌شود) و دیگر ناپدید نمی‌شود.</li>
+        <li><i class="dot f"></i>بخشِ «برگزیده» جمع‌وجورتر و حرکتِ عمودیِ ریموت در صفحه‌ی اصلی روان‌تر شد (در همان ستون می‌ماند).</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۵</span><span class="rel-title">صفحه‌ی اصلیِ جمع‌وجورتر و حرکت روان‌تر</span></div>
+      <ul>
+        <li><i class="dot f"></i>صفحه‌ی اصلی جمع‌وجورتر شد: بخش «برگزیده» کوچک‌تر شد تا حداقل دو ردیف پوستر هم‌زمان دیده شود.</li>
+        <li><i class="dot b"></i>حرکت عمودی با ریموت در صفحه‌ی اصلی حالا در همان ستون می‌ماند و دیگر به چپ/راست نمی‌پرد.</li>
+        <li><i class="dot b"></i>بازگشت از صفحه‌ی بازیگر به صفحه‌ی فیلم برمی‌گردد (نه جستجو)، و با کلید بالا به بالای بیوگرافی اسکرول می‌شود.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۴</span><span class="rel-title">امتیاز IMDb همه‌جا و رفع باگ‌های تلویزیون</span></div>
+      <ul>
+        <li><i class="dot b"></i>رفع کاملِ باگ‌های تاریخچه روی تلویزیون: دیگر خودکار فیلم پخش نمی‌شود و دکمه‌ی بازگشت لوپ نمی‌زند.</li>
+        <li><i class="dot f"></i>امتیاز IMDb حالا برای همه‌ی فیلم‌ها نشان داده می‌شود (اگر مای‌موویز نداشته باشد، از OMDb).</li>
+        <li><i class="dot f"></i>عنوان پخش: نام انگلیسی و «فصل/قسمت» اضافه شد.</li>
+        <li><i class="dot f"></i>دکمه‌ی رد تیتراژ حالا مثل کنترل‌های پخش است: فوکوس روی خودش، با OK رد و مخفی می‌شود.</li>
+        <li><i class="dot f"></i>کشور سازنده به اطلاعات فیلم اضافه شد (چند کشور).</li>
+        <li><i class="dot f"></i>دسته‌بندی‌ها ساده‌تر شد: فقط عنوان و آیکن، بدون عکس.</li>
+        <li><i class="dot b"></i>حرکت دی‌پد بین فیلم‌های یک بازیگر و حذف ردیف‌های تکراریِ خانه؛ بازگشت از بازیگر، جستجو را نگه می‌دارد.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۳</span><span class="rel-title">ناوبری بازیگر و رفع باگ‌های ریموت</span></div>
+      <ul>
+        <li><i class="dot b"></i>رفع باگ‌های ریموتِ تلویزیون که یک OK/BACK را دوبار می‌فرستاد: تاریخچه دیگر خودکار فیلم پخش نمی‌کند و بازگشت درست عمل می‌کند.</li>
+        <li><i class="dot b"></i>بازگشت از صفحه‌ی جزئیات حالا به لیست برمی‌گردد، نه صفحه‌ی اصلی.</li>
+        <li><i class="dot f"></i>حرکت بین فیلم‌های یک بازیگر با دی‌پد درست شد: چپ/راست به فیلم بعد/قبل (با پیچشِ سطر)، پایین/بالا بین سطرها.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۲</span><span class="rel-title">رفع بازگشت به خانه و رد تیتراژِ فیلم</span></div>
+      <ul>
+        <li><i class="dot b"></i>رفع باگِ «باز کردن فیلم/سریال و زدن back که یهو به صفحه‌ی اصلی می‌رفت»؛ حالا فقط یک قدم عقب می‌رود (به لیست).</li>
+        <li><i class="dot f"></i>دکمه‌ی «رد کردن تیتراژ» برای فیلم‌ها هم اضافه شد (نه فقط سریال‌ها).</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۱</span><span class="rel-title">رد تیتراژ و سالِ انتشار</span></div>
+      <ul>
+        <li><i class="dot b"></i>رد کردن تیتراژ و «قسمت بعد»: حالا با OK مستقیماً کار می‌کنند (مستقل از فوکوس)، با BACK پنهان می‌شوند و همیشه هایلایت‌شده و واضح‌اند.</li>
+        <li><i class="dot f"></i>سالِ انتشار به اسلایدشوی «برگزیده» و صفحه‌ی جزئیاتِ فیلم/سریال اضافه شد.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۱۰</span><span class="rel-title">بازیگران، کش محلی و رفع باگ‌ها</span></div>
+      <ul>
+        <li><i class="dot b"></i>رفع بازگشت از صفحه‌ی بازیگر: دکمه‌ی back حالا به همان فیلم برمی‌گردد، نه صفحه‌ی اصلی.</li>
+        <li><i class="dot b"></i>رفع رد کردن تیتراژ روی تلویزیون: حالا با OK مستقیماً کار می‌کند (وابسته به فوکوس نیست).</li>
+        <li><i class="dot f"></i>فیلمِ مبدأ حالا اولِ فیلموگرافیِ بازیگر نشان داده می‌شود.</li>
+        <li><i class="dot f"></i>کش محلی (۹۰ روزه): اطلاعات هر فیلم و بازیگرانش ذخیره می‌شود؛ فیلموگرافیِ بازیگر ترکیبی از کش + مای‌موویز + TMDB/OMDb است و بازشدنِ دوباره سریع‌تر.</li>
+        <li><i class="dot f"></i>گزینه‌ی «خودکار (هوشمند)» برای کیفیت، حالا وسطِ پخش هم قابل انتخاب است.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۹</span><span class="rel-title">پوستر تمیزتر و کیفیت هوشمند</span></div>
+      <ul>
+        <li><i class="dot f"></i>کیفیت هوشمند: هنگام شروع پخش، بر اساس سرعت اینترنت خودکار بهترین کیفیت انتخاب می‌شود (قابل خاموش‌کردن در تنظیمات).</li>
+        <li><i class="dot f"></i>پوستر تمیزتر: سال کنارِ عنوان آمد، ستاره‌ی انتخاب ادمین کوچک شد، و نشان دوبله به‌صورت آیکن درآمد.</li>
+        <li><i class="dot f"></i>تنظیمات «نمایش روی پوستر»: روشن/خاموش کردنِ هر نشان (IMDb، امتیاز کاربران، ستاره‌ی ادمین، جایزه، دوبله، زیرنویس).</li>
+        <li><i class="dot f"></i>قسمت‌های سریال دوطبقه و فشرده: «قسمت N» با آیکن دوبله/زیرنویس زیرش.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۸</span><span class="rel-title">تنظیمات مرتب‌تر و رفع امتیاز</span></div>
+      <ul>
+        <li><i class="dot f"></i>کلیدهای TMDB و OMDb به بخش «تنظیمات» منتقل شد (کلیدهای اطلاعات).</li>
+        <li><i class="dot f"></i>بخش «اتصال» از تنظیمات حذف شد.</li>
+        <li><i class="dot f"></i>بازطراحی صفحه‌ی حساب/پروفایل: آواتار، نشان اشتراک، خروج با تأیید.</li>
+        <li><i class="dot b"></i>رفع نمایش اشتباه امتیاز IMDb — گاهی تعداد رأی (مثلاً ۶۰۲) به‌جای امتیاز نشان داده می‌شد.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۶ – ۱.۹.۷</span><span class="rel-title">صفحه‌ی تنظیماتِ مستقل</span></div>
+      <ul>
+        <li><i class="dot f"></i>صفحه‌ی «تنظیمات» با کلیدهای: پخش خودکار قسمت بعد، نمایش دکمه‌ی رد تیتراژ، نمایش تگ IMDb روی پوسترها، پاک‌کردن حافظه‌ی موقت، و بخش درباره.</li>
+        <li><i class="dot b"></i>رفع پرشِ ناخواسته‌ی فوکوس به منو هنگام باز بودن صفحه‌ی فیلم/سریال (صفحه حالا تمام‌عرض است).</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۲ – ۱.۹.۵</span><span class="rel-title">پایانِ هوشمندِ تماشا</span></div>
+      <ul>
+        <li><i class="dot f"></i>پس از پایان فیلم یا آخرین قسمت، یک پیامِ متناسب با ژانر نشان داده می‌شود (بانک بزرگ و بدون تکرار).</li>
+        <li><i class="dot f"></i>بسته‌شدن خودکار پلیر و بازگشت، پس از پایانِ فیلم یا آخرین قسمت.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <div class="rel-head"><span class="ver">۱.۹.۰ – ۱.۹.۱</span><span class="rel-title">رفعِ آپدیت و تاریخچه</span></div>
+      <ul>
+        <li><i class="dot b"></i>رفع نصب‌نشدنِ خاموشِ آپدیت روی تلویزیون (نسخه‌ی نصب واقعاً به‌روزرسانی می‌شود).</li>
+        <li><i class="dot b"></i>رفع پخشِ ناخواسته هنگام باز کردن آیتم از تاریخچه (به‌جای پخش، صفحه‌ی جزئیات باز می‌شود).</li>
+      </ul>
+    </div>
+
+    <div class="rel old">
+      <div class="rel-head"><span class="ver">۱.۷.۶</span><span class="rel-title">تماشای هوشمند سریال</span></div>
+      <ul>
+        <li><i class="dot f"></i>دکمه‌ی «رد کردن تیتراژ» و پیام/شمارشِ «قسمت بعد» در سریال‌ها.</li>
+        <li><i class="dot f"></i>تاریخچه‌ی جستجو (به‌همراه جستجوی صوتی).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <a class="back" href="index.html">→ بازگشت به صفحه‌ی دانلود</a>
+  <p class="foot">مای موویز پلاس · <span style="font-family:monospace;direction:ltr">com.movizplus.moviztv</span></p>
+</body>

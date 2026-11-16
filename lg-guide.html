@@ -1,4 +1,4 @@
-<!doctype html><html lang="fa" dir="rtl"><meta charset="utf-8">
+<!doctype html><meta charset="utf-8">
 <title>نصب روی تلویزیون LG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,25 +143,6 @@
     border-radius:999px;background:var(--surface);transition:.15s}
   .back:hover{color:var(--accent-deep);border-color:var(--accent)}
   :root[data-theme="dark"] .back:hover,:root:not([data-theme="light"]) .back:hover{color:#FF8078}
-  /* ---- download button ---- */
-  a.dl{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 16px;
-    background:var(--accent);color:#fff;text-decoration:none;border-radius:14px;padding:16px;
-    font-weight:700;font-size:17px;box-shadow:var(--shadow);transition:background .15s}
-  a.dl:hover{background:var(--accent-deep)}
-  a.dl small{font-family:"JetBrains Mono",monospace;font-weight:400;font-size:12.5px;opacity:.8}
-  :root[data-theme="dark"] a.dl,:root:not([data-theme="light"]) a.dl{color:#fff}
-  /* ---- Developer Mode app mock ---- */
-  .devapp{margin:16px 0 0;background:var(--code-bg);color:var(--code-ink);border-radius:14px;
-    padding:16px 18px;box-shadow:var(--shadow);direction:ltr;font-size:15px}
-  .devapp-title{color:var(--code-dim);font-size:13px;margin-bottom:8px;direction:rtl;text-align:right}
-  .devapp .row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;
-    border-top:1px solid rgba(255,255,255,.07)}
-  .devapp .val{font-family:"JetBrains Mono",monospace;font-size:14px}
-  .devapp .val em{font-style:normal;font-family:"Vazirmatn";font-size:12px;margin-left:8px;padding:2px 9px;
-    border:1px solid rgba(255,255,255,.2);border-radius:6px;color:#cfc7d2}
-  .devapp .tog{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
-  .devapp .tog.on{background:#2E7D4F;color:#fff}
-  details.q.alt{margin-top:22px}
 </style>
 
 <div class="wrap">
@@ -169,77 +150,41 @@
   <header>
     <div class="badge" aria-hidden="true"><b>M</b><i></i></div>
     <h1>نصب روی تلویزیون LG</h1>
-    <p class="sub">نصب «مای موویز پلاس» روی webOS از کامپیوتر <b>ویندوز</b> یا <b>مک</b>. یک‌بار تلویزیون را آماده کن، بعد اسکریپت بقیه‌ی کار را انجام می‌دهد.</p>
-    <div class="meta"><span class="chip">فایل نصب: <code>moviz-webos.ipk</code></span><span class="chip">نسخه <code>۱.۹.۸۴</code></span></div>
+    <p class="sub">نصب «مای موویز پلاس» روی webOS از یک کامپیوتر <b>ویندوز</b> — بدون ترمینال، فقط با یک برنامه‌ی گرافیکی.</p>
+    <div class="meta"><span class="chip">فایل نصب: <code>moviz-webos.ipk</code></span><span class="chip">نسخه <code>۱.۹.۱۴</code></span></div>
   </header>
 
-  <div class="note"><span class="dot">i</span><div>دو مرحله دارد: <b>گام ۱</b> روی تلویزیون (فقط یک‌بار) و <b>گام ۲</b> روی کامپیوتر. تلویزیون و کامپیوتر باید روی <b>یک شبکه‌ی WiFi/LAN</b> باشند.</div></div>
+  <div class="note"><span class="dot">i</span><div>یک‌بار روی تلویزیون باید <b>Developer Mode</b> روشن شود (گام ۱). تلویزیون و کامپیوتر باید روی یک شبکه‌ی WiFi/LAN باشند.</div></div>
 
   <section>
     <div class="eyebrow">آنچه لازم داری</div>
     <h2>پیش‌نیازها</h2>
     <ol class="steps">
-      <li><h3>حساب رایگان LG Developer</h3><p>در <a href="https://developer.lge.com">developer.lge.com</a> روی <b>Sign In ← Create Account</b> بزن و ثبت‌نام کن (با گوشی یا کامپیوتر). ایمیلت را تأیید کن. این حساب برای روشن‌کردن Developer Mode لازم است.</p></li>
-      <li><h3>یک کامپیوتر ویندوز یا مک</h3><p>به اینترنت وصل باشد (بار اول ابزارهای لازم خودکار دانلود می‌شوند) و روی همان شبکه‌ی تلویزیون باشد.</p></li>
+      <li><h3>فایل نصب اپ</h3><p>فایل <span class="kbd">moviz-webos.ipk</span> را از صفحه‌ی دانلود بگیر (دکمه‌ی «دانلود بسته‌ی webOS»).</p></li>
+      <li><h3>برنامه‌ی Dev Manager Desktop</h3><p>یک برنامه‌ی گرافیکی رایگان برای ویندوز. نسخه‌ی ویندوز (<span class="kbd">.exe</span>) را از اینجا بگیر: <a href="https://github.com/webosbrew/dev-manager-desktop/releases">github.com/webosbrew/dev-manager-desktop</a></p></li>
+      <li><h3>حساب رایگان LG</h3><p>برای روشن‌کردن Developer Mode روی تلویزیون لازم است: در <a href="https://developer.lge.com">developer.lge.com</a> ثبت‌نام کن.</p></li>
     </ol>
   </section>
 
   <section>
-    <div class="eyebrow">روی تلویزیون — فقط یک‌بار</div>
-    <h2>گام ۱ — نصب و فعال‌کردن Developer Mode</h2>
+    <div class="eyebrow">روی تلویزیون — یک‌بار</div>
+    <h2>گام ۱ — روشن‌کردن Developer Mode</h2>
     <ol class="steps">
-      <li><h3>نصب اپ Developer Mode</h3><p>دکمه‌ی <b>Home</b> ریموت را بزن، <b>LG Content Store</b> (یا <b>Apps</b>) را باز کن، عبارت <span class="kbd">Developer Mode</span> را جست‌وجو کن و اپ را <b>نصب</b> کن.</p></li>
-      <li><h3>ورود به حساب</h3><p>اپ Developer Mode را باز کن و با <b>ایمیل و رمز حساب LG Developer</b> که ساختی وارد شو.</p></li>
-      <li><h3>روشن‌کردن Dev Mode Status</h3><p>کلید <b>Dev Mode Status</b> را <b>ON</b> کن. تلویزیون می‌پرسد ری‌استارت شود — <b>تأیید</b> کن. صبر کن تا دوباره روشن شود.</p></li>
-      <li><h3>روشن‌کردن Key Server</h3><p>بعد از ری‌استارت، دوباره اپ Developer Mode را باز کن و کلید <b>Key Server</b> را <b>ON</b> کن. اسکریپت از این طریق کلید اتصال را از تلویزیون می‌گیرد.</p></li>
-      <li><h3>یادداشت IP و Passphrase</h3><p>در همان صفحه دو مقدار را یادداشت کن: <b>IP</b> (مثل <span class="kbd">10.0.0.55</span>) و <b>Passphrase</b> (کد ۶ حرفی مثل <span class="kbd">AB12CD</span>). در گام ۲ لازمشان داری.</p></li>
+      <li><h3>نصب اپ Developer Mode</h3><p>در <b>LG Content Store</b> اپ <b>«Developer Mode»</b> را نصب کن، بازش کن و با حساب <b>developer.lge.com</b> لاگین کن.</p></li>
+      <li><h3>فعال‌سازی</h3><p><b>Dev Mode Status</b> را <b>ON</b> کن؛ تلویزیون یک‌بار <b>ری‌استارت</b> می‌شود.</p></li>
+      <li><h3>یادداشت اطلاعات</h3><p>دوباره اپ Developer Mode را باز کن و بردار: <b>IP تلویزیون</b> (مثل <span class="kbd">10.0.0.55</span>) و <b>Passphrase</b> (کد ۶ حرفی مثل <span class="kbd">AB12CD</span>). گزینه‌ی <b>Key Server</b> روشن بماند.</p></li>
     </ol>
-
-    <div class="devapp" aria-label="نمونه‌ی صفحه‌ی اپ Developer Mode بعد از تنظیم درست">
-      <div class="devapp-title">Developer Mode — باید این‌طور باشد</div>
-      <div class="row"><span>Dev Mode Status</span><span class="tog on">ON</span></div>
-      <div class="row"><span>Remain Session</span><span class="val">999:59:59 <em>Extend</em></span></div>
-      <div class="row"><span>IP</span><span class="val">10.0.0.55</span></div>
-      <div class="row"><span>Passphrase</span><span class="val">AB12CD</span></div>
-      <div class="row"><span>Key Server</span><span class="tog on">ON</span></div>
-    </div>
-
-    <div class="note" style="margin:16px 0 0"><span class="dot">!</span><div><b>Remain Session</b> زمان باقی‌مانده‌ی حالت توسعه‌دهنده است. اگر به صفر برسد، اپ‌های نصب‌شده (از جمله مای موویز) از تلویزیون پاک می‌شوند. هر چند وقت یک‌بار اپ Developer Mode را باز کن و دکمه‌ی <b>Extend</b> را بزن.</div></div>
   </section>
 
   <section>
-    <div class="eyebrow">روی کامپیوتر</div>
-    <h2>گام ۲ — نصب خودکار با اسکریپت</h2>
-    <a class="dl" href="moviz-lg-installer.zip">⬇ دانلود پکیج نصب (اپ + اسکریپت) <small>moviz-lg-installer.zip</small></a>
+    <div class="eyebrow">روی ویندوز</div>
+    <h2>گام ۲ — نصب با Dev Manager Desktop</h2>
     <ol class="steps">
-      <li><h3>باز کردن zip</h3><p>فایل اپ و اسکریپت‌ها همه داخل همین پکیج‌اند. کل فایل را در یک پوشه از حالت فشرده خارج کن (ویندوز: راست‌کلیک ← <b>Extract All</b>؛ مک: دوبار کلیک).</p></li>
-      <li><h3>اجرای اسکریپت</h3><p><b>ویندوز:</b> روی <span class="kbd">install-lg.bat</span> دوبار کلیک کن. اگر پیغام «Windows protected your PC» آمد، <b>More info ← Run anyway</b> را بزن.</p>
-        <p style="margin-top:8px"><b>مک:</b> روی <span class="kbd">install-lg.command</span> <b>راست‌کلیک ← Open</b> و دوباره <b>Open</b> را بزن (فقط بار اول؛ دفعه‌های بعد دوبار کلیک کافی است).</p></li>
-      <li><h3>وارد کردن IP و Passphrase</h3><p>اسکریپت ابزارهای لازم را خودش دانلود و نصب می‌کند، بعد <b>IP</b> و <b>Passphrase</b> تلویزیون را می‌پرسد. بعد از اتصال، اپ نصب و روی تلویزیون باز می‌شود. ✅</p></li>
+      <li><h3>برنامه را باز کن</h3><p>فایل <span class="kbd">.exe</span> که دانلود کردی را روی ویندوز نصب و اجرا کن.</p></li>
+      <li><h3>تلویزیون را اضافه کن</h3><p>روی دکمه‌ی <b>+ (Add Device)</b> بزن و <b>IP</b> و <b>Passphrase</b> تلویزیون را وارد کن تا وصل شود.</p></li>
+      <li><h3>نصب فایل ipk</h3><p>به بخش <b>Apps</b> برو، دکمه‌ی <b>Install</b> را بزن و فایل <span class="kbd">moviz-webos.ipk</span> را انتخاب کن. چند لحظه بعد، اپ در ردیف برنامه‌های تلویزیون ظاهر می‌شود. ✅</p></li>
     </ol>
-
-    <figure class="term">
-      <figcaption><span class="tl"><i></i><i></i><i></i></span><span class="cap">نمونه‌ی خروجی اسکریپت</span></figcaption>
-      <pre><code><span class="c">[1/5] Checking Node.js</span>            OK
-<span class="c">[2/5] Checking LG webOS CLI</span>       OK
-<span class="c">[3/5] Finding the app package</span>     OK
-<span class="c">[4/5] Connecting to the TV</span>
-<span class="p">  TV IP address:</span> 10.0.0.55
-<span class="p">  Passphrase:</span> AB12CD
-<span class="c">[5/5] Installing the app on the TV</span>
-  Done! MyMoviz Plus is installed on the TV.</code></pre>
-    </figure>
-
-    <div class="note" style="margin:16px 0 0"><span class="dot">✔</span><div>برای <b>به‌روزرسانی</b> فقط دوباره اسکریپت را اجرا کن؛ IP قبلی را به خاطر دارد و داده‌ها و تنظیمات روی تلویزیون حفظ می‌شود.</div></div>
-  </section>
-
-  <section>
-    <details class="q alt"><summary><span class="tw">+</span> روش جایگزین: نصب با برنامه‌ی گرافیکی Dev Manager</summary><div class="body">
-      <p>اگر نخواستی از اسکریپت استفاده کنی:</p>
-      <p>۱. <a href="https://github.com/webosbrew/dev-manager-desktop/releases">Dev Manager Desktop</a> را دانلود و نصب کن (ویندوز، مک و لینوکس).</p>
-      <p>۲. روی <b>+ (Add Device)</b> بزن و IP و Passphrase تلویزیون را وارد کن.</p>
-      <p>۳. در بخش <b>Apps</b> دکمه‌ی <b>Install</b> را بزن و فایل <a href="moviz-webos.ipk">moviz-webos.ipk</a> را انتخاب کن.</p>
-    </div></details>
+    <div class="note" style="margin:16px 0 0"><span class="dot">✔</span><div>برای <b>به‌روزرسانی</b> در آینده، همین کار را با فایل <span class="kbd">.ipk</span> جدید تکرار کن؛ داده‌ها و تنظیمات روی تلویزیون حفظ می‌شود.</div></div>
   </section>
 
   <hr class="rule">
@@ -247,18 +192,15 @@
     <div class="eyebrow">اگر به مشکل خوردی</div>
     <h2>عیب‌یابی</h2>
     <div class="trouble">
-      <details class="q"><summary><span class="tw">+</span> TV not reachable</summary><div class="body"><p>کامپیوتر به تلویزیون دسترسی ندارد. بررسی کن هر دو روی یک شبکه‌اند، IP را درست وارد کرده‌ای و <b>Dev Mode Status</b> روشن است. IP ممکن است بعد از خاموش‌وروشن‌شدن مودم عوض شود — از اپ Developer Mode دوباره نگاه کن.</p></div></details>
-      <details class="q"><summary><span class="tw">+</span> Key Server looks OFF</summary><div class="body"><p>در اپ Developer Mode کلید <b>Key Server</b> را روشن کن و در اسکریپت Enter بزن.</p></div></details>
-      <details class="q"><summary><span class="tw">+</span> Connection failed / passphrase اشتباه</summary><div class="body"><p>Passphrase را دقیقاً مثل اپ وارد کن (حروف بزرگ). اگر باز هم خطا داد، اپ Developer Mode را ببند و دوباره باز کن تا مقدار تازه را ببینی.</p></div></details>
-      <details class="q"><summary><span class="tw">+</span> اپ Developer Mode در Content Store پیدا نمی‌شود</summary><div class="body"><p>کشور/منطقه‌ی تلویزیون در تنظیمات ممکن است این اپ را نشان ندهد. در <b>Settings ← General ← Location</b> کشور را عوض کن و دوباره جست‌وجو کن.</p></div></details>
-      <details class="q"><summary><span class="tw">+</span> اپ بعد از چند روز از تلویزیون پاک شد</summary><div class="body"><p>زمان <b>Remain Session</b> تمام شده. در اپ Developer Mode دکمه‌ی <b>Extend</b> را بزن و دوباره اسکریپت را اجرا کن.</p></div></details>
+      <details class="q"><summary><span class="tw">+</span> Dev Manager به تلویزیون وصل نمی‌شود</summary><div class="body"><p>تلویزیون و کامپیوتر روی یک شبکه‌اند و IP درست است؟ Developer Mode روشن و <b>Key Server</b> فعال است؟</p></div></details>
+      <details class="q"><summary><span class="tw">+</span> خطای کلید / passphrase نامعتبر</summary><div class="body"><p>کلید دسترسی هر چند وقت منقضی می‌شود. در اپ Developer Mode یک <b>passphrase تازه</b> بگیر و دوباره در Dev Manager وارد کن.</p></div></details>
       <details class="q"><summary><span class="tw">+</span> اپ باز می‌شود ولی می‌گوید «اتصال اینترنت برقرار نیست»</summary><div class="body"><p>با اینکه اینترنت تلویزیون وصل است، یعنی webOS جلوی درخواست‌های cross-origin مای‌موویز را با <b>CORS</b> گرفته. اگر این را دیدی بگو تا یک راه‌حل (پراکسی سبک) اضافه کنم.</p></div></details>
       <details class="q"><summary><span class="tw">+</span> فیلم پخش نمی‌شود</summary><div class="body"><p>روی webOS پخش با <span class="kbd">&lt;video&gt;</span> مرورگر است؛ اگر عنوانی پخش نشد، لینک/فرمت آن را بگو تا بررسی کنم.</p></div></details>
     </div>
   </section>
 
   <hr class="rule">
-  <footer>ناوبری با ریموت جهت‌دار مثل نسخه‌ی اندروید کار می‌کند.</footer>
+  <footer>ناوبری با ریموت جهت‌دار مثل نسخه‌ی اندروید کار می‌کند.<br>Dev Manager Desktop نسخه‌ی مک و لینوکس هم دارد؛ مراحل یکسان است.</footer>
 </div>
 
 <script>

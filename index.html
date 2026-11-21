@@ -32,7 +32,7 @@
   <h1>مای موویز پلاس</h1>
   <p class="sub">برای نصب روی تلویزیون، نسخه‌ی دستگاهت را انتخاب کن.</p>
   <div style="margin:-24px 0 30px;display:flex;align-items:center;gap:12px">
-    <span style="color:#8E8688;font-size:13px;font-family:monospace;direction:ltr">نسخه ۱.۹.۱۴</span>
+    <span id="ver" style="color:#8E8688;font-size:13px;font-family:monospace;direction:ltr">نسخه ۲.۱.۳</span>
     <a href="changelog.html" style="color:#E7B44C;font-size:13px;text-decoration:none;border:1px solid #2A242A;border-radius:20px;padding:3px 12px">✨ تغییرات نسخه‌ها</a>
   </div>
 
@@ -49,4 +49,12 @@
   </div>
 
   <p class="foot">نصب LG با یک برنامه‌ی گرافیکی روی ویندوز انجام می‌شود — راهنما را باز کن. · <code>com.movizplus.moviztv</code></p>
+<script>
+// the version shown here comes from version.json, the same file the app checks,
+// so the page can never fall behind a release again
+fetch('version.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{
+  const fa=String(j.version).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+  document.getElementById('ver').textContent='نسخه '+fa;
+}).catch(()=>{});
+</script>
 </body>
